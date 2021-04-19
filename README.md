@@ -1,38 +1,19 @@
-# create-svelte
+# Reproduce of Date-fns bug in Svelte Kit / Vite
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Just run the project. In first run of server, it will give same error in each page visit. But after second time running
+the server will not throw the errors.
 
-## Creating a project
+Also if you close server, delete `.svelte` and `node_modules` then run the server again. It will throw same error again
+each page visit.
+
+## Run
 
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
+# install dependencies via yarn
+yarn
 
-# create a new project in my-app
-npm init svelte@next my-app
+# run via yarn
+yarn dev
 ```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm start`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
